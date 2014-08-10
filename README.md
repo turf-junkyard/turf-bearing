@@ -1,5 +1,6 @@
 turf-bearing
 =============
+[![build status](https://secure.travis-ci.org/Turfjs/turf-bearing.png)](http://travis-ci.org/Turfjs/turf-bearing)
 
 Calculates the bearing between two point features in degrees.
 
