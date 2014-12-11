@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/turfjs/turf-bearing",
   "devDependencies": {
+    "benchmark": "^1.0.0",
     "tape": "^2.13.3"
   }
 }
