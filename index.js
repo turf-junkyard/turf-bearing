@@ -8,6 +8,16 @@
  * @param {Point} start
  * @param {Point} end
  * @returns {number} bearing, in decimal degrees
+ * @example
+ * var bearing = require('turf-bearing')
+ * var point = require('turf-point')
+ *
+ * var point1 = point(-75.343, 39.984)
+ * var point2 = point(-75.534, 39.123)
+ *
+ * var bearing = bearing(point1, point2)
+ *
+ * console.log(bearing)
  */
 module.exports = function (point1, point2) {
     var coordinates1 = point1.geometry.coordinates;
