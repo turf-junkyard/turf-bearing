@@ -1,6 +1,14 @@
 //http://en.wikipedia.org/wiki/Haversine_formula
 //http://www.movable-type.co.uk/scripts/latlong.html
 
+/**
+ * Finds the bearing between two {@link Point} geometries.
+ *
+ * @module turf/bearing
+ * @param {Point} start
+ * @param {Point} end
+ * @returns {number} bearing, in decimal degrees
+ */
 module.exports = function (point1, point2) {
     var coordinates1 = point1.geometry.coordinates;
     var coordinates2 = point2.geometry.coordinates;
@@ -16,7 +24,7 @@ module.exports = function (point1, point2) {
     var bearing = toDeg(Math.atan2(a, b));
 
     return bearing;
-}
+};
 
 function toRad(degree) {
     return degree * Math.PI / 180;
