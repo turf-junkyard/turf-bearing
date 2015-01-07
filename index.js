@@ -9,13 +9,10 @@
  * @param {Point} end
  * @returns {number} bearing, in decimal degrees
  * @example
- * var bearing = require('turf-bearing')
- * var point = require('turf-point')
+ * var point1 = turf.point(-75.343, 39.984)
+ * var point2 = turf.point(-75.534, 39.123)
  *
- * var point1 = point(-75.343, 39.984)
- * var point2 = point(-75.534, 39.123)
- *
- * var bearing = bearing(point1, point2)
+ * var bearing = turf.bearing(point1, point2)
  *
  * console.log(bearing)
  */
