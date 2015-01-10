@@ -14,7 +14,7 @@
  *
  * var bearing = turf.bearing(point1, point2);
  *
- * console.log(bearing)
+ * console.log(bearing); // -170.2330491349224
  */
 module.exports = function (point1, point2) {
     var coordinates1 = point1.geometry.coordinates;
