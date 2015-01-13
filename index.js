@@ -5,8 +5,8 @@
  * Finds the bearing between two {@link Point} geometries.
  *
  * @module turf/bearing
- * @param {Point} start - starting Point
- * @param {Point} end - ending Point
+ * @param {Point} start starting Point
+ * @param {Point} end ending Point
  * @returns {number} bearing in decimal degrees
  * @example
  * var point1 = turf.point(-75.343, 39.984);
