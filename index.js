@@ -2,15 +2,21 @@
 //http://www.movable-type.co.uk/scripts/latlong.html
 
 /**
- * Finds the bearing between two {@link Point} geometries.
+ * Takes two {@link Point} features and finds the bearing between them.
  *
  * @module turf/bearing
  * @param {Point} start starting Point
  * @param {Point} end ending Point
- * @returns {number} bearing in decimal degrees
+ * @returns {Number} bearing in decimal degrees
  * @example
  * var point1 = turf.point([-75.343, 39.984]);
+ * point1.properties['marker-color'] = '#f00';
  * var point2 = turf.point([-75.534, 39.123]);
+ * point2.properties['marker-color'] = '#0f0';
+ *
+ * var points = turf.featurecollection([point1, point2]);
+ *
+ * //=points
  *
  * var bearing = turf.bearing(point1, point2);
  *
