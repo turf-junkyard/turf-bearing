@@ -4,11 +4,12 @@
   "description": "turf bearing module",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape test.js",
+    "doc": "dox -r < index.js | doxme --readme > README.md"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/turfjs/turf-bearing.git"
+    "url": "https://github.com/Turfjs/turf-bearing.git"
   },
   "keywords": [
     "turf",
@@ -17,11 +18,13 @@
   "author": "jvrousseau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turfjs/turf-bearing/issues"
+    "url": "https://github.com/Turfjs/turf-bearing/issues"
   },
-  "homepage": "https://github.com/turfjs/turf-bearing",
+  "homepage": "https://github.com/Turfjs/turf-bearing",
   "devDependencies": {
     "benchmark": "^1.0.0",
-    "tape": "^2.13.3"
+    "tape": "^2.13.3",
+    "dox": "^0.6.1",
+    "doxme": "^1.3.0"
   }
 }

@@ -1,38 +1,41 @@
-turf-bearing
-=============
+# turf-bearing
+
 [![build status](https://secure.travis-ci.org/Turfjs/turf-bearing.png)](http://travis-ci.org/Turfjs/turf-bearing)
 
-Calculates the bearing between two point features in degrees.
+turf bearing module
 
-###Install
 
-```sh
-npm install turf-bearing
-```
+### `turf.bearing(start, end)`
 
-###Parameters
+Finds the bearing between two Point geometries.
 
-|name|description|
-|---|---|
-|point1|point feature|
-|point2|point feature|
 
-###Usage
+* `start` (`Point`): starting Point
+* `end` (`Point`): ending Point
 
 ```js
-bearing(point1, point2)
+var point1 = turf.point(-75.343, 39.984);
+var point2 = turf.point(-75.534, 39.123);
+
+var bearing = turf.bearing(point1, point2);
+
+//=bearing
 ```
 
-###Example
 
-```javascript
-var bearing = require('turf-bearing')
-var point = require('turf-point')
+**Returns** `number`, bearing in decimal degrees
 
-var point1 = point(-75.343, 39.984)
-var point2 = point(-75.534, 39.123)
+## Installation
 
-var bearing = bearing(point1, point2)
+Requires [nodejs](http://nodejs.org/).
 
-console.log(bearing)
+```sh
+$ npm install turf-bearing
 ```
+
+## Tests
+
+```sh
+$ npm test
+```
+
