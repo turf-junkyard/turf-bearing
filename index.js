@@ -9,12 +9,31 @@
  * @param {Point} end ending Point
  * @returns {Number} bearing in decimal degrees
  * @example
- * var point1 = turf.point([-75.343, 39.984]);
- * point1.properties['marker-color'] = '#f00';
- * var point2 = turf.point([-75.534, 39.123]);
- * point2.properties['marker-color'] = '#0f0';
+ * var point1 = {
+ *   "type": "Feature",
+ *   "properties": {
+ *     "marker-color": '#f00'
+ *   },
+ *   "geometry": {
+ *     "type": "Point",
+ *     "coordinates": [-75.343, 39.984]
+ *   }
+ * };
+ * var point2 = {
+ *   "type": "Feature",
+ *   "properties": {
+ *     "marker-color": '#0f0'
+ *   },
+ *   "geometry": {
+ *     "type": "Point",
+ *     "coordinates": [-75.534, 39.123]
+ *   }
+ * };
  *
- * var points = turf.featurecollection([point1, point2]);
+ * var points = {
+ *   "type": "FeatureCollection",
+ *   "features": [point1, point2]
+ * };
  *
  * //=points
  *
