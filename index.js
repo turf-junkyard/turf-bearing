@@ -7,6 +7,7 @@
  * @module turf/bearing
  * @param {Point} start starting Point
  * @param {Point} end ending Point
+ * @category measurement
  * @returns {Number} bearing in decimal degrees
  * @example
  * var point1 = {
