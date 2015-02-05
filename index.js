@@ -5,6 +5,7 @@
  * Takes two {@link Point} features and finds the bearing between them.
  *
  * @module turf/bearing
+ * @category measurement
  * @param {Point} start starting Point
  * @param {Point} end ending Point
  * @category measurement
