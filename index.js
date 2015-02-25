@@ -6,8 +6,8 @@
  *
  * @module turf/bearing
  * @category measurement
- * @param {Point} start starting Point
- * @param {Point} end ending Point
+ * @param {Feature<Point>} start starting Point
+ * @param {Feature<Point>} end ending Point
  * @category measurement
  * @returns {Number} bearing in decimal degrees
  * @example
