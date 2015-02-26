@@ -2,7 +2,7 @@
 //http://www.movable-type.co.uk/scripts/latlong.html
 
 /**
- * Takes two {@link Point} features and finds the bearing between them.
+ * Takes two {@link Point|points} and finds the geographic bearing between them.
  *
  * @module turf/bearing
  * @category measurement
