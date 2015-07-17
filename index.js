@@ -72,14 +72,14 @@ module.exports = function (point1, point2, units) {
 
 function toCompass(bearingNum) {
   var b = ''
-  if (bearingNum >= -22.49 && bearingNum <= 22.49) b = "N";
-  else if (bearingNum >= 22.5 && bearingNum <= 67.49) b = "NE";
-  else if (bearingNum >= 67.5 && bearingNum <= 112.49) b = "E";
-  else if (bearingNum >= 112.5 && bearingNum <= 157.49) b = "SE";
-  else if (bearingNum >= 157.5 || bearingNum <= -157.5) b = "S";
-  else if (bearingNum >= -157.49 && bearingNum <= -112.5) b = "SW";
-  else if (bearingNum >= -112.49 && bearingNum <= -67.5) b = "W";
-  else if (bearingNum >= -67.49 && bearingNum <= -22.5) b = "NW";
+  if (bearingNum >= -22.49 && bearingNum <= 22.49) b = 'N';
+  else if (bearingNum >= 22.5 && bearingNum <= 67.49) b = 'NE';
+  else if (bearingNum >= 67.5 && bearingNum <= 112.49) b = 'E';
+  else if (bearingNum >= 112.5 && bearingNum <= 157.49) b = 'SE';
+  else if (bearingNum >= 157.5 || bearingNum <= -157.5) b = 'S';
+  else if (bearingNum >= -157.49 && bearingNum <= -112.5) b = 'SW';
+  else if (bearingNum >= -112.49 && bearingNum <= -67.5) b = 'W';
+  else if (bearingNum >= -67.49 && bearingNum <= -22.5) b = 'NW';
   return b
 }
 
