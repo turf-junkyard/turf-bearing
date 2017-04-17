@@ -8,6 +8,7 @@
  * @category measurement
  * @param {Feature<Point>} start starting Point
  * @param {Feature<Point>} end ending Point
+ * @param {String} [units=degrees] can be degrees or compass
  * @category measurement
  * @returns {Number} bearing in decimal degrees
  * @example
@@ -43,7 +44,7 @@
  *
  * //=bearing
  */
-module.exports = function (point1, point2) {
+module.exports = function (point1, point2, units) {
     var coordinates1 = point1.geometry.coordinates;
     var coordinates2 = point2.geometry.coordinates;
 
@@ -57,8 +58,30 @@ module.exports = function (point1, point2) {
 
     var bearing = toDeg(Math.atan2(a, b));
 
-    return bearing;
+    switch(units) {
+      case 'degrees':
+        return bearing;
+      case 'compass':
+        return toCompass(bearing);
+      case undefined:
+        return bearing;
+      default:
+        throw new Error('unknown option given to "units"');
+    }
 };
+
+function toCompass(bearingNum) {
+  var b = ''
+  if (bearingNum >= -22.49 && bearingNum <= 22.49) b = 'N';
+  else if (bearingNum >= 22.5 && bearingNum <= 67.49) b = 'NE';
+  else if (bearingNum >= 67.5 && bearingNum <= 112.49) b = 'E';
+  else if (bearingNum >= 112.5 && bearingNum <= 157.49) b = 'SE';
+  else if (bearingNum >= 157.5 || bearingNum <= -157.5) b = 'S';
+  else if (bearingNum >= -157.49 && bearingNum <= -112.5) b = 'SW';
+  else if (bearingNum >= -112.49 && bearingNum <= -67.5) b = 'W';
+  else if (bearingNum >= -67.49 && bearingNum <= -22.5) b = 'NW';
+  return b
+}
 
 function toRad(degree) {
     return degree * Math.PI / 180;
